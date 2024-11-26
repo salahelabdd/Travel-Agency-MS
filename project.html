@@ -5,13 +5,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skyline Travels</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="titleName">
-        <h1 class="intoduction">Welcome to Skyline Travels!</h1>
-        <button class="loginUsername"></button>
-    </div>
+    <header>
+        <div class="logo">🌍 TravelEasy</div>
+        <div>Welcome to your next adventure!</div>
+    </header>
+
+    <main>
+        <!-- Travel Packages -->
+        <div class="section" id="packages">
+            <h2>Available Packages</h2>
+            <div class="package">
+                <h3>Bali Escape</h3>
+                <p>Enjoy a 7-day trip to beautiful Bali. Includes flights and accommodations.</p>
+                <button onclick="bookPackage('Bali Escape')">Book Now1</button>
+            </div>
+            <div class="package">
+                <h3>Paris Getaway</h3>
+                <p>Experience the city of love with a 5-day package. Includes flights and hotel stays.</p>
+                <button onclick="bookPackage('Paris Getaway')">Book Now</button>
+            </div>
+            <div class="package">
+                <h3>Safari Adventure</h3>
+                <p>Embark on a thrilling 10-day safari in Africa. Includes guided tours and meals.</p>
+                <button onclick="bookPackage('Safari Adventure')">Book Now</button>
+            </div>
+        </div>
+
+        <!-- Booking Form -->
+        <div id="bookingForm">
+            <h2>Booking Form</h2>
+            <p id="selectedPackage"></p>
+            <input type="text" id="name" placeholder="Your Nameee" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <input type="number" id="guests" placeholder="Number of Guests" required>
+            <button onclick="submitBooking()">Submit Booking</button>
+        </div>
+    </main>
+
+    <footer>
+        © 2024 TravelEasy. All rights reserved.
+    </footer>
 </body>
 
 </html>
